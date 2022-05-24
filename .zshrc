@@ -5,6 +5,9 @@ export PATH=/Users/alex/.local/bin/:$PATH
 export PATH=/Users/alex/.cargo/bin:$PATH
 # Aliases for nvim and lvim
 
+# Aliases to push dotfiles after editing
+alias pushdotfiles="cd ~/dotfiles && git add . && git commit -m \"updated\" && git push"
+
 # Dumb bluetooth kbd
 alias setkbd="hidutil property --set '{\"UserKeyMapping\":[{\"HIDKeyboardModifierMappingSrc\":0x700000035,\"HIDKeyboardModifierMappingDst\":0x700000064},{\"HIDKeyboardModifierMappingSrc\":0x700000064,\"HIDKeyboardModifierMappingDst\":0x700000035}]}'"
 alias resetkbd="hidutil property --set '{\"UserKeyMapping\":[{\"HIDKeyboardModifierMappingSrc\":0x700000035,\"HIDKeyboardModifierMappingDst\":0x700000035},{\"HIDKeyboardModifierMappingSrc\":0x700000064,\"HIDKeyboardModifierMappingDst\":0x700000064}]}'"
