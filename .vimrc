@@ -53,6 +53,7 @@ let mapleader = "\<Space>"
 
 " Quick save
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
 
 if executable('pyls')
     " pip install python-language-server
