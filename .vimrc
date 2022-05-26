@@ -15,8 +15,9 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 call plug#end()
 
-set tabstop=2
-set shiftwidth=2
+set guicursor=i-n-v-c:block-Cursor
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set ai
 set number
