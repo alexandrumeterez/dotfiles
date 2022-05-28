@@ -1,16 +1,21 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Remap the ~ key on my bluetooth keyboard
+# https://rakhesh.com/mac/using-hidutil-to-map-macos-keyboard-keys/
+# https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES
 
+# hidutil property --matching '{"ProductID":0xB342}' --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x700000064},{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035}]}'
+
+# Append stuff to path
 export PATH=/Users/alex/.local/bin/:$PATH
 export PATH=/Users/alex/.cargo/bin:$PATH
-# Aliases for nvim and lvim
 
 # Aliases to push dotfiles after editing
 alias pushdotfiles="cwd=$(pwd) && cd ~/dotfiles && git add . && git commit -m \"updated\" && git push && cd $cwd"
 
 # Dumb bluetooth kbd
-alias setkbd="hidutil property --set '{\"UserKeyMapping\":[{\"HIDKeyboardModifierMappingSrc\":0x700000035,\"HIDKeyboardModifierMappingDst\":0x700000064},{\"HIDKeyboardModifierMappingSrc\":0x700000064,\"HIDKeyboardModifierMappingDst\":0x700000035}]}'"
-alias resetkbd="hidutil property --set '{\"UserKeyMapping\":[{\"HIDKeyboardModifierMappingSrc\":0x700000035,\"HIDKeyboardModifierMappingDst\":0x700000035},{\"HIDKeyboardModifierMappingSrc\":0x700000064,\"HIDKeyboardModifierMappingDst\":0x700000064}]}'"
+# alias setkbd="hidutil property --matching '{\"ProductID\":0xB342}' --set '{\"UserKeyMapping\":[{\"HIDKeyboardModifierMappingSrc\":0x700000035,\"HIDKeyboardModifierMappingDst\":0x700000064},{\"HIDKeyboardModifierMappingSrc\":0x700000064,\"HIDKeyboardModifierMappingDst\":0x700000035}]}'"
+# alias resetkbd="hidutil property --set '{\"UserKeyMapping\":[{\"HIDKeyboardModifierMappingSrc\":0x700000035,\"HIDKeyboardModifierMappingDst\":0x700000035},{\"HIDKeyboardModifierMappingSrc\":0x700000064,\"HIDKeyboardModifierMappingDst\":0x700000064}]}'"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/alex/.oh-my-zsh"
